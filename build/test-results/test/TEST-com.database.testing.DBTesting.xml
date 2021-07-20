@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.database.testing.DBTesting" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-20T23:05:48" hostname="DESKTOP-9TKB724" time="0.312">
+  <properties/>
+  <testcase name="Insert_data_In_To_employee_data_Table" classname="com.database.testing.DBTesting" time="0.125"/>
+  <testcase name="test_WhenAData_IsDeleted_FromATable_OfDatabase" classname="com.database.testing.DBTesting" time="0.171"/>
+  <testcase name="updateData_Into_employee_data_Table" classname="com.database.testing.DBTesting" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
