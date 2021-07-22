@@ -1,30 +1,14 @@
 package com.database.testing;
 
+import com.bridgelabz.db.testing.base.DatabaseConnection;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.sql.*;
 
-public class DBTesting{
+public class DBTesting extends DatabaseConnection{
 
-    public  static  Statement statement;
-    public  static  Connection connection;
     static String sqlQuery;
-
-    @BeforeTest
-    public void setUpDatabase() throws ClassNotFoundException, SQLException {
-
-        Class.forName ("com.mysql.jdbc.Driver");
-        System.out.println ("driver loaded");
-
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/spotify_data",
-                "root","root");
-
-        System.out.println ("connected my database");
-        statement = connection.createStatement ();
-    }
 
     @Test
     public void Insert_data_In_To_employee_data_Table()  {
@@ -42,9 +26,9 @@ public class DBTesting{
     }
 
     @Test
-    public void updateData_Into_employee_data_Table() throws SQLException {
+    public void updateData_Into_employee_data_Table() {
         try {
-            sqlQuery = "update employees_data set mobile_number = '8888888888' where id = '2';";
+            sqlQuery = "update employees_data set mobile_number = '8888888888' where id = '1';";
             int noOfRowsAffected = statement.executeUpdate(sqlQuery);
 
             Assert.assertEquals(noOfRowsAffected, 1);
@@ -54,7 +38,7 @@ public class DBTesting{
     }
 
     @Test
-    public void test_WhenAData_IsDeleted_FromATable_OfDatabase() throws SQLException {
+    public void test_WhenAData_IsDeleted_FromATable_OfDatabase(){
         try {
 
             sqlQuery = "delete from employees_data where id = '3'";
@@ -63,17 +47,6 @@ public class DBTesting{
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-    }
-
-    @AfterTest
-    public void tearDown() {
-        if (connection != null) {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 }

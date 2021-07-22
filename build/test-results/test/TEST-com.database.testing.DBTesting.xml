@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.database.testing.DBTesting" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-21T16:13:37" hostname="DESKTOP-9TKB724" time="0.172">
+<testsuite name="com.database.testing.DBTesting" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-22T02:46:54" hostname="DESKTOP-9TKB724" time="0.265">
   <properties/>
-  <testcase name="test_WhenAData_IsDeleted_FromATable_OfDatabase" classname="com.database.testing.DBTesting" time="0.172"/>
+  <testcase name="test_WhenAData_IsDeleted_FromATable_OfDatabase" classname="com.database.testing.DBTesting" time="0.265"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
